@@ -1,5 +1,6 @@
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget
+from PySide6.QtWidgets import QMainWindow
 from ui_sniffer_uart import Ui_MainWindow
 from PySide6 import QtWidgets
 from datetime import datetime
@@ -7,8 +8,7 @@ import serial
 import sys
 import threading
 
-
-class UserInterface( QWidget, Ui_MainWindow ):
+class UserInterface( QMainWindow, Ui_MainWindow ):
     def __init__( self ):
         super( ).__init__( )
         self.setupUi( self )
@@ -17,8 +17,8 @@ class UserInterface( QWidget, Ui_MainWindow ):
         self.uart_rx = None
         self.com_port_tx = 1
         self.com_port_rx = 1
-        self.baudrate_tx = 19200
-        self.baudrate_rx = 19200
+        self.baudrate_tx = 912600
+        self.baudrate_rx = 921600
         self.com_port_tx_error = False
         self.com_port_rx_error = False
         self.captured_mix_data = []
@@ -31,8 +31,8 @@ class UserInterface( QWidget, Ui_MainWindow ):
         self.btn_start.clicked.connect( self.start_loggin )
         self.btn_stop.clicked.connect( self.stop_loggin )
     
-    def show( self ):
-        self.show( )
+    # def show( self ):
+    #     self.show( )
     
     def start_loggin( self ):
         self.clear_screens( )
