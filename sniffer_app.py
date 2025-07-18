@@ -32,15 +32,15 @@ class UserInterface(QMainWindow, Ui_MainWindow):
         self.stop_event_read_rx = threading.Event()
 
         self.signals = UartSignals()
-        self.signals.new_data.connect(self.update_display)
+        self.signals.new_data.connect( self.update_display )
 
         self.clear_screens()
-        self.btn_start.clicked.connect(self.start_loggin)
-        self.btn_stop.clicked.connect(self.stop_loggin)
+        self.btn_start.clicked.connect( self.start_loggin )
+        self.btn_stop.clicked.connect( self.stop_loggin )
+        self.btn_save.clicked.connect( self.save_log )
 
     def start_loggin(self):
         self.clear_screens()
-        self.current_date_and_time = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
         self.configure_uart()
 
         if not (self.com_port_tx_error or self.com_port_rx_error):
@@ -74,6 +74,11 @@ class UserInterface(QMainWindow, Ui_MainWindow):
         if hasattr(self, 'thread_read_rx') and self.thread_read_rx.is_alive():
             self.thread_read_rx.join()
 
+    def save_log( self ):
+        self.current_date_and_time = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+        self.log_file_name = "log_" + self.current_date_and_time + ".txt"
+        with open( str( f"logs\\{self.log_file_name}" ), "a" ) as file:
+            file.write( " ".join( self.captured_mix_data ) )
 
     def configure_uart(self):
         if self.chk_use_tx.isChecked():
