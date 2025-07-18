@@ -448,7 +448,7 @@ QPushButton {
      <string>Enable TX</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_stop_2">
+   <widget class="QPushButton" name="btn_save">
     <property name="geometry">
      <rect>
       <x>920</x>
