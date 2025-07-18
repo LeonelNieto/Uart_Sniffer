@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QLabel,
     QMainWindow, QPushButton, QSizePolicy, QSpinBox,
     QTabWidget, QTextBrowser, QWidget)
+from resources import resourcer_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -55,16 +56,29 @@ class Ui_MainWindow(object):
         self.tab_uart.addTab(self.tab_tx_and_rx, "")
         self.btn_start = QPushButton(self.centralwidget)
         self.btn_start.setObjectName(u"btn_start")
-        self.btn_start.setGeometry(QRect(750, 390, 101, 31))
+        self.btn_start.setGeometry(QRect(770, 380, 51, 51))
         font1 = QFont()
         font1.setPointSize(10)
         font1.setBold(True)
         self.btn_start.setFont(font1)
         self.btn_start.setAutoFillBackground(False)
+        self.btn_start.setStyleSheet(u"\n"
+"QPushButton {\n"
+"	border-image: url(:/icons/play-button.svg);\n"
+"    background-color: transparent;\n"
+"    border: none;\n"
+"}\n"
+"")
         self.btn_stop = QPushButton(self.centralwidget)
         self.btn_stop.setObjectName(u"btn_stop")
-        self.btn_stop.setGeometry(QRect(880, 390, 101, 31))
+        self.btn_stop.setGeometry(QRect(890, 380, 60, 55))
         self.btn_stop.setFont(font1)
+        self.btn_stop.setStyleSheet(u"QPushButton {\n"
+"	border-image: url(:/icons/stop-button.svg);\n"
+"    background-color: transparent;\n"
+"    border: none;\n"
+"}\n"
+"")
         self.cmb_baudrate_tx = QComboBox(self.centralwidget)
         self.cmb_baudrate_tx.addItem("")
         self.cmb_baudrate_tx.addItem("")
@@ -150,8 +164,8 @@ class Ui_MainWindow(object):
         self.tab_uart.setTabText(self.tab_uart.indexOf(self.tab_tx), QCoreApplication.translate("MainWindow", u"TX", None))
         self.tab_uart.setTabText(self.tab_uart.indexOf(self.tab_rx), QCoreApplication.translate("MainWindow", u"RX", None))
         self.tab_uart.setTabText(self.tab_uart.indexOf(self.tab_tx_and_rx), QCoreApplication.translate("MainWindow", u"TX and RX", None))
-        self.btn_start.setText(QCoreApplication.translate("MainWindow", u"START", None))
-        self.btn_stop.setText(QCoreApplication.translate("MainWindow", u"STOP", None))
+        self.btn_start.setText("")
+        self.btn_stop.setText("")
         self.cmb_baudrate_tx.setItemText(0, QCoreApplication.translate("MainWindow", u"4800", None))
         self.cmb_baudrate_tx.setItemText(1, QCoreApplication.translate("MainWindow", u"9600", None))
         self.cmb_baudrate_tx.setItemText(2, QCoreApplication.translate("MainWindow", u"19200", None))
