@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.tab_uart.addTab(self.tab_tx_and_rx, "")
         self.btn_start = QPushButton(self.centralwidget)
         self.btn_start.setObjectName(u"btn_start")
-        self.btn_start.setGeometry(QRect(770, 380, 51, 51))
+        self.btn_start.setGeometry(QRect(760, 380, 51, 51))
         font1 = QFont()
         font1.setPointSize(10)
         font1.setBold(True)
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_stop = QPushButton(self.centralwidget)
         self.btn_stop.setObjectName(u"btn_stop")
-        self.btn_stop.setGeometry(QRect(890, 380, 60, 55))
+        self.btn_stop.setGeometry(QRect(840, 380, 60, 55))
         self.btn_stop.setFont(font1)
         self.btn_stop.setStyleSheet(u"QPushButton {\n"
 "	border-image: url(:/icons/stop-button.svg);\n"
@@ -149,6 +149,16 @@ class Ui_MainWindow(object):
         self.chk_use_tx.setObjectName(u"chk_use_tx")
         self.chk_use_tx.setGeometry(QRect(870, 60, 101, 20))
         self.chk_use_tx.setFont(font1)
+        self.btn_stop_2 = QPushButton(self.centralwidget)
+        self.btn_stop_2.setObjectName(u"btn_stop_2")
+        self.btn_stop_2.setGeometry(QRect(920, 384, 61, 51))
+        self.btn_stop_2.setFont(font1)
+        self.btn_stop_2.setStyleSheet(u"QPushButton {\n"
+"	border-image: url(:/icons/download_2.svg);\n"
+"    background-color: transparent;\n"
+"    border: none;\n"
+"}\n"
+"")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -194,5 +204,6 @@ class Ui_MainWindow(object):
         self.lb_setup_tx.setText(QCoreApplication.translate("MainWindow", u"TX SETUP", None))
         self.chk_use_rx.setText(QCoreApplication.translate("MainWindow", u"Enable RX", None))
         self.chk_use_tx.setText(QCoreApplication.translate("MainWindow", u"Enable TX", None))
+        self.btn_stop_2.setText("")
     # retranslateUi
 
