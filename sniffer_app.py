@@ -5,6 +5,7 @@ from datetime import datetime
 import serial
 import sys
 import threading
+import os
 
 class UartSignals(QObject):
     new_data = Signal(str, str)
@@ -75,6 +76,8 @@ class UserInterface(QMainWindow, Ui_MainWindow):
             self.thread_read_rx.join()
 
     def save_log( self ):
+        if not os.path.exists("logs"):
+            os.makedirs("logs")
         self.current_date_and_time = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
         self.log_file_name = "log_" + self.current_date_and_time + ".txt"
         with open( str( f"logs\\{self.log_file_name}" ), "a" ) as file:
@@ -118,13 +121,15 @@ class UserInterface(QMainWindow, Ui_MainWindow):
                 break
 
     def update_display(self, label, hex_byte):
-        text = f"{label}:{hex_byte} "
+        text = f"{label}:{hex_byte.upper()} "
+        byte_text = hex_byte.upper()
+
         if label.upper() == "TX":
-            self.display_tx.insertPlainText(text)
-            self.captured_tx_data.append(text)
+            self.display_tx.insertPlainText( byte_text )
+            self.captured_tx_data.append( byte_text )
         elif label.upper() == "RX":
-            self.display_rx.insertPlainText(text)
-            self.captured_rx_data.append(text)
+            self.display_rx.insertPlainText( byte_text )
+            self.captured_rx_data.append( byte_text )
 
         self.display_tx_and_rx.insertPlainText(text)
         self.captured_mix_data.append(text)
