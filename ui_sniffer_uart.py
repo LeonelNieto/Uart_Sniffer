@@ -149,11 +149,11 @@ class Ui_MainWindow(object):
         self.chk_use_tx.setObjectName(u"chk_use_tx")
         self.chk_use_tx.setGeometry(QRect(870, 60, 101, 20))
         self.chk_use_tx.setFont(font1)
-        self.btn_stop_2 = QPushButton(self.centralwidget)
-        self.btn_stop_2.setObjectName(u"btn_stop_2")
-        self.btn_stop_2.setGeometry(QRect(920, 384, 61, 51))
-        self.btn_stop_2.setFont(font1)
-        self.btn_stop_2.setStyleSheet(u"QPushButton {\n"
+        self.btn_save = QPushButton(self.centralwidget)
+        self.btn_save.setObjectName(u"btn_save")
+        self.btn_save.setGeometry(QRect(920, 384, 61, 51))
+        self.btn_save.setFont(font1)
+        self.btn_save.setStyleSheet(u"QPushButton {\n"
 "	border-image: url(:/icons/download_2.svg);\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
@@ -204,6 +204,6 @@ class Ui_MainWindow(object):
         self.lb_setup_tx.setText(QCoreApplication.translate("MainWindow", u"TX SETUP", None))
         self.chk_use_rx.setText(QCoreApplication.translate("MainWindow", u"Enable RX", None))
         self.chk_use_tx.setText(QCoreApplication.translate("MainWindow", u"Enable TX", None))
-        self.btn_stop_2.setText("")
+        self.btn_save.setText("")
     # retranslateUi
 
