@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>download_1.svg</file>
+    <file>download_2.svg</file>
+    <file>play-button.svg</file>
+    <file>stop.svg</file>
+    <file>stop-button.svg</file>
+  </qresource>
+</RCC>
