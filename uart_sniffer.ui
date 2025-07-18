@@ -85,10 +85,10 @@
    <widget class="QPushButton" name="btn_start">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>390</y>
-      <width>101</width>
-      <height>31</height>
+      <x>770</x>
+      <y>380</y>
+      <width>51</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -100,17 +100,26 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+	border-image: url(:/icons/play-button.svg);
+    background-color: transparent;
+    border: none;
+}
+</string>
+    </property>
     <property name="text">
-     <string>START</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_stop">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>390</y>
-      <width>101</width>
-      <height>31</height>
+      <x>890</x>
+      <y>380</y>
+      <width>60</width>
+      <height>55</height>
      </rect>
     </property>
     <property name="font">
@@ -119,8 +128,16 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/icons/stop-button.svg);
+    background-color: transparent;
+    border: none;
+}
+</string>
+    </property>
     <property name="text">
-     <string>STOP</string>
+     <string/>
     </property>
    </widget>
    <widget class="QComboBox" name="cmb_baudrate_tx">
@@ -433,6 +450,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/resourcer.qrc"/>
+ </resources>
  <connections/>
 </ui>
