@@ -18,6 +18,8 @@ A Python-based UART (Universal Asynchronous Receiver-Transmitter) sniffer applic
 
 ## Screenshots
 
+<img width="1014" height="514" alt="Image" src="https://github.com/user-attachments/assets/e5437bf6-b7b0-4a3b-ad12-fa9d3a22fe47" />
+
 The application features a modern Qt interface with:
 - Tabbed display for different data views
 - Control buttons with custom SVG icons
