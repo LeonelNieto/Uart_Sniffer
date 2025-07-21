@@ -1,4 +1,5 @@
 # UART Sniffer
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A Python-based UART (Universal Asynchronous Receiver-Transmitter) sniffer application built with PySide6/Qt6. This tool allows you to monitor and capture serial communication data from two separate UART channels simultaneously.
 
@@ -156,5 +157,9 @@ The application uses daemon threads for UART reading to prevent blocking the UI:
    - Ensure proper wiring connections
 
 ---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Note**: This application is designed for Windows COM ports. For Linux/Mac compatibility, modify the serial port naming convention in `configure_uart()` method.
