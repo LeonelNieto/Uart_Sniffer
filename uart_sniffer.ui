@@ -17,13 +17,21 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+QWidget {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+</string>
+   </property>
    <widget class="QTabWidget" name="tab_uart">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>701</width>
-      <height>461</height>
+      <x>280</x>
+      <y>80</y>
+      <width>711</width>
+      <height>391</height>
      </rect>
     </property>
     <property name="font">
@@ -32,6 +40,32 @@
       <pointsize>10</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QTabBar::tab {
+    background: #2d2d2d;
+    color: #cccccc;
+    padding: 4px 7px;
+    border: 1px solid #3c3c3c;
+    border-bottom: none;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: #007acc; 
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #007acc;
+}
+
+QTabWidget::pane {
+    border: 1px solid #3c3c3c;
+    top: -1px; 
+}
+</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -45,8 +79,8 @@
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>651</width>
-        <height>391</height>
+        <width>661</width>
+        <height>331</height>
        </rect>
       </property>
      </widget>
@@ -60,8 +94,8 @@
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>651</width>
-        <height>391</height>
+        <width>661</width>
+        <height>331</height>
        </rect>
       </property>
      </widget>
@@ -75,8 +109,8 @@
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>651</width>
-        <height>391</height>
+        <width>661</width>
+        <height>331</height>
        </rect>
       </property>
      </widget>
@@ -85,10 +119,10 @@
    <widget class="QPushButton" name="btn_start">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>380</y>
-      <width>51</width>
-      <height>51</height>
+      <x>30</x>
+      <y>30</y>
+      <width>36</width>
+      <height>36</height>
      </rect>
     </property>
     <property name="font">
@@ -116,10 +150,10 @@ QPushButton {
    <widget class="QPushButton" name="btn_stop">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>380</y>
-      <width>60</width>
-      <height>55</height>
+      <x>100</x>
+      <y>30</y>
+      <width>38</width>
+      <height>38</height>
      </rect>
     </property>
     <property name="font">
@@ -143,8 +177,8 @@ QPushButton {
    <widget class="QComboBox" name="cmb_baudrate_tx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>100</y>
+      <x>150</x>
+      <y>150</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -204,8 +238,8 @@ QPushButton {
    <widget class="QComboBox" name="cmb_baudrate_rx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>270</y>
+      <x>150</x>
+      <y>330</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -265,8 +299,8 @@ QPushButton {
    <widget class="QLabel" name="lb_com_port_tx">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>150</y>
+      <x>30</x>
+      <y>200</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -284,8 +318,8 @@ QPushButton {
    <widget class="QLabel" name="lb_com_port_rx">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>320</y>
+      <x>30</x>
+      <y>380</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -303,8 +337,8 @@ QPushButton {
    <widget class="QLabel" name="lb_baudrate_tx">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>110</y>
+      <x>30</x>
+      <y>160</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -322,8 +356,8 @@ QPushButton {
    <widget class="QLabel" name="lb_baudrate_tx_2">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>280</y>
+      <x>30</x>
+      <y>340</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -341,8 +375,8 @@ QPushButton {
    <widget class="QLabel" name="lb_baudrate_tx_3">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>220</y>
+      <x>30</x>
+      <y>280</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -361,8 +395,8 @@ QPushButton {
    <widget class="QLabel" name="lb_setup_tx">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>50</y>
+      <x>30</x>
+      <y>100</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -381,8 +415,8 @@ QPushButton {
    <widget class="QSpinBox" name="sb_com_port_rx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>320</y>
+      <x>150</x>
+      <y>380</y>
       <width>111</width>
       <height>23</height>
      </rect>
@@ -397,8 +431,8 @@ QPushButton {
    <widget class="QSpinBox" name="sb_com_port_tx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>150</y>
+      <x>150</x>
+      <y>200</y>
       <width>111</width>
       <height>23</height>
      </rect>
@@ -413,8 +447,8 @@ QPushButton {
    <widget class="QCheckBox" name="chk_use_rx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>230</y>
+      <x>150</x>
+      <y>290</y>
       <width>101</width>
       <height>20</height>
      </rect>
@@ -432,8 +466,8 @@ QPushButton {
    <widget class="QCheckBox" name="chk_use_tx">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>60</y>
+      <x>150</x>
+      <y>110</y>
       <width>101</width>
       <height>20</height>
      </rect>
@@ -451,10 +485,10 @@ QPushButton {
    <widget class="QPushButton" name="btn_save">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>384</y>
-      <width>61</width>
-      <height>51</height>
+      <x>170</x>
+      <y>30</y>
+      <width>35</width>
+      <height>35</height>
      </rect>
     </property>
     <property name="font">
@@ -473,6 +507,156 @@ QPushButton {
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="led_runnig">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background-color: #00ff00;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="led_stopped">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background-color: #fedb00;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="led_error">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>40</y>
+      <width>12</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background-color: #fe0000;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_runnig">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f0f0f0;
+font-family: 'Segoe UI', sans-serif;
+font-size: 12pt
+</string>
+    </property>
+    <property name="text">
+     <string>Runnig</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_stopped">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f0f0f0;
+font-family: 'Segoe UI', sans-serif;
+font-size: 12pt
+</string>
+    </property>
+    <property name="text">
+     <string>Stopped</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_stopped_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>30</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f0f0f0;
+font-family: 'Segoe UI', sans-serif;
+font-size: 12pt
+</string>
+    </property>
+    <property name="text">
+     <string>COM Port Error</string>
     </property>
    </widget>
   </widget>
